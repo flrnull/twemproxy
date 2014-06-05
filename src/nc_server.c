@@ -260,7 +260,7 @@ server_failure(struct context *ctx, struct server *server)
 
     server->failure_count++;
 
-    log_debug(LOG_VERB, "server '%.*s' failure count %"PRIu32" limit %"PRIu32,
+    log_error("server '%.*s' failure count %"PRIu32" limit %"PRIu32,
               server->pname.len, server->pname.data, server->failure_count,
               pool->server_failure_limit);
 
